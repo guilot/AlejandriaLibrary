@@ -1,2 +1,2 @@
 # AlejandriaLibrary
-Digital Book Library to organice, rate, and manage your books. First commit. 
+Digital Book Library to organice, rate, and manage your books.
