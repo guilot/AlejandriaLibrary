@@ -46,7 +46,7 @@ namespace AlejandriaLogic
             this.coverImage = coverImage;
 
             // Logic for duration
-            duration = numPages < 140 ? "Short" : numPages <= 250 ? "Medium" :"Long";
+            duration = numPages < 140 ? "Short" : numPages <= 320 ? "Medium" :"Long";
         }
 
         // Getters y setters (propiedades)

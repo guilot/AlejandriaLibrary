@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using static AlejandriaLogic.DataStructures;
 
 namespace AlejandriaLogic
 {
-    internal class Library
+    public class Library
     {
         // Diccionario de libros en la biblioteca, con la clave generada a partir del título del libro
         private Dictionary<int, Book> bookMap;
@@ -113,6 +110,19 @@ namespace AlejandriaLogic
             }
         }
 
+        public User FindUserById(int id)
+        {
+            if (userMap.ContainsKey(id))
+            {
+                return userMap[id];
+            }
+            else
+            {
+                Console.WriteLine("El usuario con ID " + id + " no existe en la biblioteca.");
+                return null;
+            }
+        }
+
         // Método para buscar un libro por título
         public Book FindBookByTitle(string title)
         {
@@ -173,7 +183,7 @@ namespace AlejandriaLogic
             {
                 Console.WriteLine("No existen libros de duracion " + duration + ".");
                 // Retorna null si no se encuentran libros para la duracion especificada
-                return null;
+                return new List<Book>();
             }
         }
 
